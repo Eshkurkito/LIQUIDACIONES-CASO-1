@@ -231,7 +231,7 @@ case3_props = set(case3_cleaning_amenities.keys())
 # Caso 4
 case4_props = {
     "SERRERIA 04", "SERRERIA 05", "RETOR A", "RETOR B",
-    "PASAJE ANGELES Y FEDERICO 01", "PASAJE ANGELES Y FEDERICO 02", "PASAJE ANGELES Y FEDERICO 03",
+    "PASAJE AYF 01", "PASAJE AYF 02", "PASAJE AYF 03",
     "MALILLA 05", "MALILLA 06", "MALILLA 07", "MALILLA 08", "MALILLA 14", "MALILLA 15",
     "BENICALAP 01", "BENICALAP 02", "BENICALAP 03", "BENICALAP 04", "BENICALAP 05", "BENICALAP 06"
 }
@@ -649,3 +649,4 @@ if generate:
         if warn > 0 and not treat_empty_as_booking:
             st.warning(f"Hay {warn} reservas con comisión > 0 pero portal vacío. "
                        f"Si deben ser Booking, marca «Tratar reservas sin portal como Booking (+21% comisión)» y vuelve a generar.")
+
