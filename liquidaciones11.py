@@ -118,7 +118,6 @@ LETTER_MAP_DEFAULT = {
     "F": "Fecha salida",
     "H": "Noches ocupadas",
     "I": "Ingreso alojamiento",
-    "J": "Ingreso limpieza",    # por si viniera aquí
     "L": "Ingreso limpieza",    # mapeo fuerte: tarifa limpieza en L
     "O": "Total ingresos",
     "AP": "Portal",
@@ -655,3 +654,4 @@ if generate:
         if warn > 0 and not treat_empty_as_booking:
             st.warning(f"Hay {warn} reservas con comisión > 0 pero portal vacío. "
                        f"Si deben ser Booking, marca «Tratar reservas sin portal como Booking (+21% comisión)» y vuelve a generar.")
+
