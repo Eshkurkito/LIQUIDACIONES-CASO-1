@@ -716,10 +716,10 @@ if raw_bank is not None:
         if liquid_date_col not in liq.columns:
             st.error(f"En las liquidaciones no existe la columna '{liquid_date_col}'. Genera de nuevo o elige otra fecha.")
             st.stop()
-        ensure_required(liq, ["Pago al propietario"], "Conciliación")
+        ensure_required(liq, ["Pago recibido"], "Conciliación")
 
         liq["__FechaRef__"] = pd.to_datetime(liq[liquid_date_col], errors="coerce", dayfirst=True)
-        liq["__Pago__"] = pd.to_numeric(liq["Pago al propietario"], errors="coerce").round(2)
+        liq["__Pago__"] = pd.to_numeric(liq["Pago recibido"], errors="coerce").round(2)
         liq["__Desc__"] = liq.get("Alojamiento", "").astype(str) + " · " + liq.get("Fecha entrada", "").astype(str)
 
         bank2 = bank.copy()
