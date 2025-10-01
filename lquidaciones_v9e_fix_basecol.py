@@ -205,8 +205,8 @@ case1_props = set(case1_percent_amenities.keys())
 
 case2_percent_amenities = {
     "VISITACION": (0.20, 14.88),
-    "PADRE PORTA 6": (0.20, 12.09), "PADRE PORTA 7": (0.20, 12.09), "PADRE PORTA 8": (0.20, 12.09),
-    "PADRE PORTA 9": (0.20, 12.09), "PADRE PORTA 10": (0.20, 12.09),
+    "PADRE PORTA 06": (0.20, 12.09), "PADRE PORTA 07": (0.20, 12.09), "PADRE PORTA 08": (0.20, 12.09),
+    "PADRE PORTA 09": (0.20, 12.09), "PADRE PORTA 10": (0.20, 12.09),
     "LLADRO Y MALLI 00": (0.20, 9.45), "LLADRO Y MALLI 01": (0.20, 9.45), "LLADRO Y MALLI 02": (0.20, 9.45),
     "LLADRO Y MALLI 03": (0.20, 9.45), "LLADRO Y MALLI 04": (0.20, 9.45),
     "APOLO 29": (0.20, 11.58), "APOLO 197": (0.20, 17.40),
