@@ -209,7 +209,7 @@ case2_percent_amenities = {
     "PADRE PORTA 09": (0.20, 12.09), "PADRE PORTA 10": (0.20, 12.09),
     "LLADRO Y MALLI 00": (0.20, 9.45), "LLADRO Y MALLI 01": (0.20, 9.45), "LLADRO Y MALLI 02": (0.20, 9.45),
     "LLADRO Y MALLI 03": (0.20, 9.45), "LLADRO Y MALLI 04": (0.20, 9.45),
-    "APOLO 29": (0.20, 11.58), "APOLO 197": (0.20, 17.40),
+    "APOLO 029": (0.20, 11.58), "APOLO 197": (0.20, 17.40),
 }
 case2_props = set(case2_percent_amenities.keys())
 
@@ -234,7 +234,7 @@ case5_percent_amenities = {
 }
 case5_props = set(case5_percent_amenities.keys())
 
-APOLO_ONLY = {"APOLO 29", "APOLO 197"}
+APOLO_ONLY = {"APOLO 029", "APOLO 197"}
 
 def props_for_case(case):
     if case == 1: return case1_props
@@ -580,7 +580,7 @@ with st.sidebar:
     with col_v2:
         vat_case2 = st.number_input("Caso 2 (%)", min_value=0.0, max_value=30.0, value=21.0, step=0.5)
         vat_case4 = st.number_input("Caso 4 (%)", min_value=0.0, max_value=30.0, value=0.0, step=0.5)
-        only_apolo_c2 = st.checkbox("Caso 2: aplicar solo a APOLO 29/197", value=True)
+        only_apolo_c2 = st.checkbox("Caso 2: aplicar solo a APOLO 029/197", value=True)
     treat_empty_as_booking = st.checkbox("Tratar portal vacío como Booking (aplicar IVA comisión)", value=False)
     skip_booking_vat = st.checkbox("No añadir IVA a comisión de Booking (ya viene con IVA)", value=False)
     generate = st.button("Generar liquidación")
