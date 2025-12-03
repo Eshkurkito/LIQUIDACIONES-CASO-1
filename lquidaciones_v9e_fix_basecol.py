@@ -398,22 +398,22 @@ def process_case4(df, treat_empty_as_booking=False, skip_booking_vat=False, vat_
     ingreso = pd.to_numeric(out.get("Ingreso alojamiento", 0.0), errors="coerce").fillna(0.0)
     out["IVA del alquiler"] = ingreso - (ingreso / 1.10)
 
-def honorarios(r):
-    aloj = str(r.get("Alojamiento", "")).strip().upper()
-    ingreso = float(r.get("Ingreso alojamiento", 0.0))
-    iva_alq = float(r.get("IVA del alquiler", 0.0))
+    def honorarios(r):
+        aloj = str(r.get("Alojamiento", "")).strip().upper()
+        ingreso = float(r.get("Ingreso alojamiento", 0.0))
+        iva_alq = float(r.get("IVA del alquiler", 0.0))
 
-    # Ingreso sin IVA (alquiler / 1,10)
-    ingreso_sin_iva = ingreso - iva_alq
+        # Ingreso sin IVA (alquiler / 1,10)
+        ingreso_sin_iva = ingreso - iva_alq
 
-    if aloj in {"SERRERIA 04", "SERRERIA 05"}:
-        # Para SERRERIA 04 y 05: Ingreso sin IVA * 20%
-        base = ingreso_sin_iva
-    else:
-        # Para el resto del Caso 4: mantenemos lógica actual
-        base = ingreso_sin_iva - float(r.get("Comisión portal", 0.0))
+        if aloj in {"SERRERIA 04", "SERRERIA 05"}:
+            # Para SERRERIA 04 y 05: Ingreso sin IVA * 20%
+            base = ingreso_sin_iva
+        else:
+            # Resto de pisos del caso 4: lógica anterior
+            base = ingreso_sin_iva - float(r.get("Comisión portal", 0.0))
 
-    return base * 0.20
+        return base * 0.20
 
     out["Honorarios Florit"] = out.apply(honorarios, axis=1).round(2)
 
