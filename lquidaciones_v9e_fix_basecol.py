@@ -196,9 +196,9 @@ case1_percent_amenities = {
     "CADIZ": (0.20, 9.11), "DENIA 61": (0.20, 10.96), "DOLORES ALCAYDE 04": (0.20, 11.33),
     "DR.LLUCH": (0.20, 11.16), "ERUDITO": (0.20, 13.37), "GOZALBO": (0.20, 15.25),
     "LA ELIANA": (0.20, 15.25), "MORAIRA": (0.25, 11.33), "NAPOLES Y SICILIA": (0.25, 0.00),
-    "OLIVERETA 5": (0.20, 0.00), "OVE 01": (0.18, 0.00), "OVE 02": (0.18, 0.00),
+    "OLIVERETA 5": (0.20, 0.00), "OVE 01": (0.20, 0.00), "OVE 02": (0.20, 0.00),
     "QUART I": (0.20, 9.09), "QUART II": (0.20, 9.09), "SAN LUIS": (0.20, 11.02),
-    "SERRANOS": (0.20, 13.37), "SEVILLA": (0.18, 9.45), "TUNDIDORES": (0.20, 7.85),
+    "SERRANOS": (0.20, 13.37), "SEVILLA": (0.20, 9.45), "TUNDIDORES": (0.20, 7.85),
     "VALLE": (0.20, 11.33),
 }
 case1_props = set(case1_percent_amenities.keys())
